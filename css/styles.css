@@ -84,6 +84,9 @@ img {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
 }
+.mobile-arrows {
+  display: none !important;
+}
 /* header */
 .heading {
   min-height: 40rem;
@@ -211,7 +214,6 @@ aside {
 }
 
 .features {
-  height: 25rem;
   background-color: var(--verydarkdesaturatedblue);
   border-top-right-radius: 7rem;
   border-bottom-left-radius: 7rem;
@@ -282,4 +284,102 @@ footer a {
 footer a:hover {
   text-decoration: underline;
   color: var(--white);
+}
+
+@media (max-width: 560px) {
+  .mobile-arrows {
+    display: inline !important;
+  }
+  .desktop-arrows {
+    display: none !important;
+  }
+  .btn-secondary:nth-child(1) {
+    background: linear-gradient(90deg, rgb(247, 143, 143), rgb(233, 0, 0));
+    color: white !important;
+  }
+  .navigation {
+    display: block;
+  }
+  .navs {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    box-shadow: 0px 2px 10px var(--verydarkdesaturatedblue);
+    border-radius: 2rem;
+  }
+  .navs ul {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--white);
+    margin: 0;
+    border: none;
+  }
+  .navs ul:nth-child(1) {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+  .navs ul:nth-child(2) {
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+  .navs ul li {
+    padding: 2rem;
+  }
+  .navs ul li a {
+    color: var(--verydarkgrayblue);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+  }
+  .navs ul ul {
+    position: relative;
+    display: none;
+    background-color: #e4e4e4;
+    border-radius: 2rem;
+  }
+  .navs ul li a:hover {
+    color: var(--verydarkdesaturatedblue);
+  }
+  .navs ul li:hover ul {
+    display: block;
+  }
+  .container {
+    width: 95%;
+  }
+  .hero {
+    text-align: center;
+  }
+  .main {
+    margin: 2rem;
+  }
+  .main-title {
+    margin: 1rem 0;
+  }
+  .content {
+    flex-direction: column-reverse;
+  }
+  .content h2 {
+    text-align: center;
+  }
+  .inner-content,
+  aside {
+    width: 100%;
+  }
+  .holder {
+    flex-direction: column;
+  }
+  .features-left,
+  .features-right {
+    width: 100%;
+  }
+  .img-holder {
+    height: 100%;
+    width: 100%;
+    transform: translateY(-3rem);
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
