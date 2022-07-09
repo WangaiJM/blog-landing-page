@@ -64,12 +64,25 @@ img {
   font-size: 1.2rem;
 }
 .btn-primary {
+  font-weight: 300;
+}
+.btn-primary:hover {
+  background-color: var(--cta-hover-background);
+  color: var(--white);
   font-weight: 600;
 }
 .btn-secondary {
   background-color: var(--white);
   color: var(--lightred) !important;
   font-weight: 600;
+}
+.btn-secondary:nth-child(1):hover {
+  background-color: var(--cta-hover-background);
+  color: var(--white) !important;
+}
+.btn-secondary:hover {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
 }
 /* header */
 .heading {
@@ -95,7 +108,7 @@ img {
   width: 100%;
 }
 .logo {
-  width: 15%;
+  width: 5rem;
   margin-right: 1rem;
 }
 .navs {
@@ -112,18 +125,41 @@ img {
   padding: 0.8rem;
   position: relative;
 }
+
 .navs ul li a {
   color: var(--white);
 }
-.navs ul li ul {
+.navs ul li a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+  color: white;
+}
+
+.navs ul li a span img {
+  width: 0.8rem;
+  height: 0.8rem;
+  display: inline;
+  margin-left: 0.5rem;
+}
+.navs ul ul {
   position: absolute;
   top: 2.5rem;
-  display: list-item;
+  right: 0;
   background: var(--white);
   display: none;
 }
+.navs ul li:hover ul {
+  display: inherit;
+}
+.navs ul li:hover img {
+  transform: rotate(180deg);
+}
 .navs ul li ul li a {
   color: var(--verydarkgrayblue);
+}
+.navs ul ul li a:hover {
+  color: var(--verydarkdesaturatedblue);
+  text-decoration: none;
 }
 .hero {
   display: flex;
@@ -192,10 +228,11 @@ aside {
   margin: auto;
 }
 .features-left {
+  width: 40%;
 }
 .img-holder {
-  height: 100%;
-  width: 100%;
+  height: 20rem;
+  width: 20rem;
 }
 .img-holder img {
   max-width: 100%;
@@ -204,6 +241,7 @@ aside {
 .features-right {
   color: var(--white);
   padding: 2rem;
+  width: 60%;
 }
 .features-right h2 {
   font-size: 2rem;
@@ -220,9 +258,11 @@ footer {
   background-color: var(--footer-background);
   color: var(--footer-text);
   padding: 3rem 0;
+  border-top-right-radius: 7rem;
 }
 .footer-navs img {
-  height: 4rem;
+  height: 3rem;
+  margin-top: 1rem;
 }
 .footer-container {
   display: flex;
@@ -238,4 +278,8 @@ footer li {
 footer a {
   color: var(--footer-text);
   text-align: center;
+}
+footer a:hover {
+  text-decoration: underline;
+  color: var(--white);
 }
