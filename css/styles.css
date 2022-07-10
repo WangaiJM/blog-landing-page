@@ -261,9 +261,18 @@ img {
   color: var(--body-copy);
 }
 aside {
-  overflow: hidden;
   width: 40%;
 }
+/*
+
+Not working
+
+picture:nth-child(1) img {
+  transform: translateX(10rem);
+}
+picture:nth-child(2) img {
+  transform: translateX(-10rem);
+} */
 
 .features {
   background-color: var(--verydarkdesaturatedblue);
